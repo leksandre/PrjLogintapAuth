@@ -7,10 +7,53 @@
 //
 
 import SwiftUI
+import UIKit
+var scanner1 = ScannerViewController()
+//var datascanner: DataScannerViewController?
 
 struct ContentView: View {
+    @State var isActive = false
+    @State var code = ""
     var body: some View {
-        Text("Hello, World!")
+
+      
+        
+        NavigationView {
+            VStack {
+                Text("Hello World")
+                NavigationLink(destination: DetailView(isActive: $isActive, code: $code), isActive: $isActive, label: { EmptyView() })
+                             Button(action: {
+                                 self.isActive.toggle()
+                             }, label: {
+                                 Text("navigate")
+                             })
+            }
+        }
+        
+        
+    }
+    
+      
+}
+
+struct DetailView: View {
+
+    @Binding var isActive: Bool
+    @Binding var code: String
+
+    var body2: some View {
+    
+    }
+    var body: some View {
+        
+        Button(action: {
+            self.code = "new code"
+            self.isActive.toggle()
+        }) {
+            Text("Back")
+        };
+        Text("scann your qr code Logintap");
+        
     }
 }
 
