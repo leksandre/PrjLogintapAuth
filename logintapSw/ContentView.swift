@@ -41,20 +41,45 @@ struct DetailView: View {
 
     @Binding var isActive: Bool
     @Binding var code: String
+//    let scanner1 = ScannerViewController();
 
-    var body2: some View {
-    Text("scann your qr code Logintap");
-    }
+
+
     var body: some View {
+//            override func view
+
+
         
-        Button(action: {
-            self.code = "new code"
-            self.isActive.toggle()
-        }) {
-            Text("Back")
+        VStack {
+            Text("Welcome to second view")
+                    .font(.title)
+            
+            Button(action: {
+                self.code = "new code"
+                self.isActive.toggle()
+            }) {
+                Text("Back")
+            }
+            
+    
+//  ScannerViewController();
+           Text("scann your qr code Logintap");
+          
+            
+                  ScannerView()
+                 .frame(width: 300, height: 300)
+                 .cornerRadius(10)
+                 .shadow(radius: 10)
+            
         }
         
-    }
+        
+    };
+//    body.view.addSubview(scanner1)
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
+    
 }
 
 

@@ -16,6 +16,7 @@
 		1F9EA6552A52ED3C0042D355 /* logintapSwTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9EA6542A52ED3C0042D355 /* logintapSwTests.swift */; };
 		1F9EA6602A52ED3C0042D355 /* logintapSwUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9EA65F2A52ED3C0042D355 /* logintapSwUITests.swift */; };
 		1F9EA66E2A53FEF80042D355 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9EA66D2A53FEF80042D355 /* ScannerViewController.swift */; };
+		1F9EA6702A56D8610042D355 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9EA66F2A56D8610042D355 /* ScannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1F9EA65F2A52ED3C0042D355 /* logintapSwUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logintapSwUITests.swift; sourceTree = "<group>"; };
 		1F9EA6612A52ED3C0042D355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F9EA66D2A53FEF80042D355 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		1F9EA66F2A56D8610042D355 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				1F9EA6482A52ED3C0042D355 /* LaunchScreen.storyboard */,
 				1F9EA64B2A52ED3C0042D355 /* Info.plist */,
 				1F9EA6452A52ED3C0042D355 /* Preview Content */,
+				1F9EA66F2A56D8610042D355 /* ScannerView.swift */,
 			);
 			path = logintapSw;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				1F9EA6402A52ED3A0042D355 /* SceneDelegate.swift in Sources */,
 				1F9EA6422A52ED3A0042D355 /* ContentView.swift in Sources */,
 				1F9EA66E2A53FEF80042D355 /* ScannerViewController.swift in Sources */,
+				1F9EA6702A56D8610042D355 /* ScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
