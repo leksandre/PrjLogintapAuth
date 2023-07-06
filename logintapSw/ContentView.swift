@@ -33,6 +33,7 @@ struct ContentView: View {
         
     }
     
+    
       
 }
 
@@ -42,7 +43,7 @@ struct DetailView: View {
     @Binding var code: String
 
     var body2: some View {
-    
+    Text("scann your qr code Logintap");
     }
     var body: some View {
         
@@ -51,8 +52,7 @@ struct DetailView: View {
             self.isActive.toggle()
         }) {
             Text("Back")
-        };
-        Text("scann your qr code Logintap");
+        }
         
     }
 }
