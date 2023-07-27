@@ -8,6 +8,8 @@
 
 import SwiftUI
 import UIKit
+import CodeScanner
+
 var scanner1 = ScannerViewController()
 //var datascanner: DataScannerViewController?
 
@@ -45,12 +47,31 @@ struct DetailView: View {
 
 
 
+    
+    
+    @State var isPresentingScanner = false
+    @State var scannerCode: String = "Start scan qr code"
+    
+        var scannerSheet: some View {
+            CodeScannerView(
+                codeTypes: [.qr],
+                completion: {result in
+                if case let .success(code)=result {
+                    self.scannerCode = code
+                    self.isPresentingScanner = false
+                }
+            })
+            
+        };
+    
+    
+    
     var body: some View {
-//            override func view
 
 
-        
-        VStack {
+        VStack(spacing:15) {
+            
+            
             Text("Welcome to second view")
                     .font(.title)
             
@@ -61,7 +82,7 @@ struct DetailView: View {
                 Text("Back")
             }
             
-    
+            
 //  ScannerViewController();
            Text("scann your qr code Logintap");
           
@@ -71,10 +92,21 @@ struct DetailView: View {
                  .cornerRadius(10)
                  .shadow(radius: 10)
             
+                    
+                    Text(scannerCode)
+                        Button("Scan qr code by using package CodeScanner"){
+                            self.isPresentingScanner=true
+                        }
+            
+            .sheet(isPresented:$isPresentingScanner){
+                      self.scannerSheet
+                  }
+            
         }
         
         
     };
+    
 //    body.view.addSubview(scanner1)
 //    override func viewDidLoad() {
 //        super.viewDidLoad()

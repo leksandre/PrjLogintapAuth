@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		1F9EA6602A52ED3C0042D355 /* logintapSwUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9EA65F2A52ED3C0042D355 /* logintapSwUITests.swift */; };
 		1F9EA66E2A53FEF80042D355 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9EA66D2A53FEF80042D355 /* ScannerViewController.swift */; };
 		1F9EA6702A56D8610042D355 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9EA66F2A56D8610042D355 /* ScannerView.swift */; };
+		1FAEB3382A72A6C4004E5EC1 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 1FAEB3372A72A6C4004E5EC1 /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FAEB3382A72A6C4004E5EC1 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +160,9 @@
 			dependencies = (
 			);
 			name = logintapSw;
+			packageProductDependencies = (
+				1FAEB3372A72A6C4004E5EC1 /* CodeScanner */,
+			);
 			productName = logintapSw;
 			productReference = 1F9EA63A2A52ED3A0042D355 /* logintapSw.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 1F9EA6312A52ED3A0042D355;
+			packageReferences = (
+				1FAEB3362A72A6C4004E5EC1 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 1F9EA63B2A52ED3A0042D355 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -596,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1FAEB3362A72A6C4004E5EC1 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:twostraws/CodeScanner.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1FAEB3372A72A6C4004E5EC1 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1FAEB3362A72A6C4004E5EC1 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F9EA6322A52ED3A0042D355 /* Project object */;
 }
