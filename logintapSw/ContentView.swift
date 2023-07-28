@@ -13,6 +13,63 @@ import CodeScanner
 var scanner1 = ScannerViewController()
 //var datascanner: DataScannerViewController?
 
+
+//extension URL {
+//   func getExpandedURL() async throws -> Result<URL, Error> {
+//       var request = URLRequest(url: self)
+//       request.httpMethod = "HEAD"
+//
+//       let (_, response) = try await URLSession.shared.data(for: request)
+//
+//       guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+//           throw URLError.unableToExpand
+//       }
+//
+//       if let expandedURL = response.url {
+//           return .success(expandedURL)
+//       } else {
+//           throw URLError.unableToExpand
+//       }
+//   }
+//
+//    enum URLError: Error {
+//        case unableToExpand
+//    }
+//}
+
+//struct ContentViewExt: View {
+//    let shortURL = URL(string: "https://itun.es/us/JB7h_")
+//    @State var expandedURLResult: Result<URL, Error>?
+//    
+//    var body: some View {
+//        Form {
+//            Section("Short URL") {
+//                Text(shortURL?.description ?? "")
+//            }
+//            
+//            Section("Long URL") {
+//                switch expandedURLResult {
+//                    case .some(.success(let expandedURL)):
+//                        Text(expandedURL.description)
+//                    case .none:
+//                        Text("Waiting")
+//                    case .some(.failure(let error)):
+//                        Text(error.localizedDescription)
+//                }
+//            }
+//        }
+//        .task {
+//            do {
+//                expandedURLResult = try await shortURL?.getExpandedURL()
+//            } catch {
+//                expandedURLResult = .failure(error)
+//            }
+//        }
+//    }
+//}
+
+
+
 struct ContentView: View {
     @State var isActive = false
     @State var code = ""
@@ -120,3 +177,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
